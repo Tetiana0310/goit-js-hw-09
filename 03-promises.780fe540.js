@@ -5,4 +5,4 @@ var t,o=arguments[3];!function(o,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"GyVV":[function(require,module,exports) {
 "use strict";var e=require("notiflix/build/notiflix-notify-aio");const t={form:document.querySelector(".form")};function i(e,t){return new Promise((i,o)=>{const n=Math.random()>.3;setTimeout(()=>{n?i({position:e,delay:t}):o({position:e,delay:t})},t)})}function o(t){t.preventDefault();const{elements:{delay:o,step:n,amount:r}}=t.currentTarget;let s=Number(o.value),u=Number(n.value),l=Number(r.value);for(let a=1;a<=l;a+=1)i(a,s).then(({position:t,delay:i})=>e.Notify.success(`✅ Fulfilled promise ${t} in ${i}ms`)).catch(({position:t,delay:i})=>e.Notify.failure(`❌ Rejected promise ${t} in ${i}ms`)),s+=u}t.form.addEventListener("submit",o);
 },{"notiflix/build/notiflix-notify-aio":"MeeU"}]},{},["GyVV"], null)
-//# sourceMappingURL=/goit-js-hw-09/03-promises.97dbb356.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.780fe540.js.map
