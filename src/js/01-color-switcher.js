@@ -9,12 +9,12 @@ btnStart.addEventListener('click', onChangeColorBtnStart);
 btnStop.addEventListener('click', onChangeColorBtnStop);
 
 function onChangeColorBtnStart() {
-    btnStart.setAttribute('disabled')
+    btnStart.setAttribute('disabled', 'disabled')
     timer = setInterval(onChangeColor, intervalDelay)
 }
 
 function onChangeColorBtnStop() {
-    btnStop.removeAttribute('disabled')
+  btnStop.removeAttribute('disabled')
     clearInterval(timer)
 }
 
