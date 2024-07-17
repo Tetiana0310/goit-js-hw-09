@@ -34,6 +34,6 @@ function onFormSubmit(evt) {
         localStorage.removeItem(KEY);
         feedbackForm.reset();
     } else {
-        alert('Fill please all field');
+        alert('Fill please all fields');
     }
 }
