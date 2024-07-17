@@ -1,4 +1,4 @@
-let formData = {
+const formData = {
     email: "",
     message: ""
 };
@@ -29,7 +29,10 @@ function onFormSubmit(evt) {
     evt.preventDefault();
 
     if (feedbackForm.email.value !== '' && feedbackForm.message.value !== '') {
-        console.log({ email: feedbackForm.email.value, message: feedbackForm.message.value });
+        console.log({
+            email: feedbackForm.email.value,
+            message: feedbackForm.message.value
+        });
 
         localStorage.removeItem(KEY);
         feedbackForm.reset();
