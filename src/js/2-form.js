@@ -1,4 +1,4 @@
-const formData = {
+let formData = {
     email: "",
     message: ""
 };
@@ -28,7 +28,7 @@ function onSaveFormInfo() {
 function onFormSubmit(evt) {
     evt.preventDefault();
 
-    if (feedbackForm.email.value !== '' && feedbackForm.message.value !== '') {
+    if (feedbackForm.email.value.trim() !== '' && feedbackForm.message.value.trim() !== '') {
         console.log({
             email: feedbackForm.email.value,
             message: feedbackForm.message.value
@@ -36,6 +36,7 @@ function onFormSubmit(evt) {
 
         localStorage.removeItem(KEY);
         feedbackForm.reset();
+        formData = { email: "", message: "" };
     } else {
         alert('Fill please all fields');
     }
